@@ -124,7 +124,7 @@ const Transcipter = () => {
             const highlightedPara = para.split(' ').map(word => {
                 const matchingWord = jsonList.find(item => item.word === word && item.startTime <= time && time <= item.endTime);
                 return matchingWord
-                    ? `<span class="highlight">${word}</span>`
+                    ? `<span class="bg-yellow-300 font-bold">${word}</span>`
                     : word;
             }).join(' ');
             document.getElementById('highlightedText').innerHTML = highlightedPara;
